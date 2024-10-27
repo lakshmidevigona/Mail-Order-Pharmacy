@@ -1,0 +1,79 @@
+/* src/styles/AdminDashboard.css */
+
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    height: 100vh;
+    background: url('./images/adminbackground.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Cover the entire area */
+    position: relative; /* For positioning the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.admin-dashboard::before { /* Create a blur effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white overlay for better contrast */
+    backdrop-filter: blur(10px); /* Blur the background */
+    z-index: 1; /* Position the blur below the buttons */
+}
+
+.admin-dashboard .header {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
+    position: relative; /* Keep header above the blur */
+    z-index: 2; /* Ensure the header is on top */
+}
+
+.admin-dashboard .button-container {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical alignment */
+    align-items: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    position: relative; /* Keep button container above the blur */
+    z-index: 2; /* Ensure the buttons are on top */
+}
+
+.admin-dashboard .dashboard-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.admin-dashboard .dashboard-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.admin-dashboard .dashboard-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Focus effect */
+}
+
+.admin-dashboard .icon {
+    font-size: 22px;
+    transition: color 0.2s; /* Smooth icon color change */
+}
+
+.admin-dashboard .dashboard-button:hover .icon {
+    color: #ffcc00; /* Change icon color on hover */
+}

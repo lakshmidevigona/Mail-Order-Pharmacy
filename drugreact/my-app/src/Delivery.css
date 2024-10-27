@@ -1,0 +1,225 @@
+/* Container Styling */
+/* Delivery.css */
+
+/* Unique Background for Delivery Page */
+/* Unique Background for Delivery Page */
+.delivery-page {
+    background-image: url('./images/delivery1.jpg'); /* Update with your image path */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    min-height: 100vh; /* Ensure it takes full height */
+    display: flex; /* Use Flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Container Styling */
+.delivery-container {
+    width: 80%;
+    margin: 0; /* Remove margin for centering */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #232222;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Rest of your CSS remains the same... */
+
+  
+  /* Header */
+  .delivery-container h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+  }
+  
+  .button-group button {
+    padding: 12px 24px;
+    background: linear-gradient(to right, #5520e7, #00f2fe);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .button-group button:hover {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+  }
+  
+  /* Form Container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .form-container input,
+  .form-container select,
+  .search-bar {
+    width: 80%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+  
+  .form-container input:focus,
+  .form-container select:focus,
+  .search-bar:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.6);
+    outline: none;
+  }
+  
+  /* Label Styling */
+  .form-container label {
+    align-self: flex-start;
+    margin-left: 10%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Submit Button */
+  .form-container button {
+    padding: 12px 24px;
+    background-color: #06ee9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #064bfa;
+  }
+  
+  /* User Cards */
+  .users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* User Cards */
+  .user-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure the card stays above background */
+    z-index: 2; /* Bring it above the background image */
+    cursor: pointer;
+  }
+  
+  /* Hover Effect */
+  .user-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .user-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .user-card p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .user-card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .user-card button:hover {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    width: 50%;
+    margin: 0 auto 20px;
+    padding: 12px;
+    border: 1px solid #6e6c6c;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .search-bar:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.6);
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+  
+    .form-container input,
+    .form-container select,
+    .search-bar {
+        width: 90%;
+    }
+  
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+  /* Delete Button */
+  .user-card .delete-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .user-card .delete-button:hover {
+    background-color: #e63946;
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,198 @@
+:root {
+    --accent: #33b5e5; /* Accent color */
+    --white: #ffffff; /* White color */
+    --black: #000000; /* Black color */
+    --dark-gray: rgba(0, 0, 0, 0.8); /* Dark gray color */
+    --gray: rgba(0, 0, 0, 0.6); /* Gray color */
+    --light-gray: rgba(0, 0, 0, 0.4); /* Light gray color */
+    --lighter-gray: rgba(0, 0, 0, 0.2); /* Lighter gray color */
+}
+
+body {
+    background: linear-gradient(to bottom right, #e9e9e9, #f0f4f8); /* Gradient background */
+    color: var(--gray);
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure full height for centering */
+}
+
+/* Center the login form on the page */
+.centered-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Form Module */
+.form-module {
+    position: relative;
+    background: var(--white);
+    max-width: 320px;
+    width: 100%;
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transition: height 0.6s, padding 0.6s;
+    border-radius: 10px; /* Rounded corners for the form module */
+}
+
+.form-module .toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+    width: 30px;
+    height: 30px;
+    margin: -5px 0 0;
+    color: var(--white);
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.form-module .toggle:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+.form-module .form {
+    padding: 40px;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+/* Tooltip with Arrow */
+.form-module .toggle .tooltip {
+    position: absolute;
+    top: 5px;
+    right: -65px;
+    background: var(--accent); /* Use accent color for tooltip */
+    color: var(--white); /* Change text color to white for better contrast */
+    padding: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+/* Arrow between the icon and tooltip */
+.form-module .toggle .tooltip:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Position arrow on the left side of tooltip */
+    margin-top: -5px; /* Center the arrow vertically */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--accent) transparent transparent; /* Arrow pointing left */
+}
+
+/* Color for H2 headings */
+.form-module h2 {
+    color: var(--accent); /* Accent color for H2 tags */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Styling with Borders */
+.form-module input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Default border */
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-weight: 400;
+    transition: border 0.3s ease, color 0.3s ease;
+}
+
+.form-module input:focus {
+    border: 1px solid var(--accent); /* Change border color on focus */
+    color: var(--dark-gray); /* Change text color on focus */
+}
+
+/* Button Hover Effect */
+.form-module button {
+    cursor: pointer;
+    background: var(--accent);
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    color: var(--white);
+    transition: background 0.3s ease;
+}
+
+.form-module .btn-hover:hover {
+    background: #1e88e5; /* Brighten on hover */
+}
+
+/* CTA Links */
+.form-module .cta {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    color: var(--gray);
+    font-size: 12px;
+    text-align: center;
+}
+
+.form-module .cta a {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+/* Center the login form on the page */
+.centered-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-module {
+    position: relative;
+    background: var(--white);
+    max-width: 500px;
+    width: 100%;
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding-top: 10px; /* Reduced padding here */
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Reduced the margin-bottom to tighten space */
+}
+
+.login-header .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px; 
+    margin-top: 0px; /* Reduced the space between the logo and the header text */
+}
+
+.login-header h1 {
+    font-size: 20px; /* Adjusted font size slightly for a more compact look */
+    font-weight: bold;
+    color: #333;
+    margin: auto;
+}
+
+/* Tighten up the form title */
+.form h2 {
+    font-size: 18px;
+    margin-top: 5px; /* Reduced top margin to bring it closer to the logo */
+    color: #333;
+}

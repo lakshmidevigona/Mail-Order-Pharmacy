@@ -1,0 +1,74 @@
+/* contactUs.css */
+
+.contactus {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2.5em;
+    text-align: center;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    color: #333333; /* Darker text for readability */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactus:hover {
+    transform: translateY(-5px);
+}
+
+.contactus h2 {
+    margin-bottom: 1em;
+    font-size: 2.2em;
+    color: #333333; /* Dark gray for the title */
+    letter-spacing: 1px;
+}
+
+.contactus p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #555555; /* Softer gray for paragraph text */
+    margin-bottom: 1em;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    margin-top: 2em;
+}
+
+.contact-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.8em;
+    transition: color 0.2s ease;
+}
+
+.contact-item:last-child {
+    border: none;
+}
+
+.contact-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+    color: #444444; /* Neutral dark gray for headings */
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.contact-item p {
+    font-size: 1.2em;
+    color: #333333; /* Dark gray for contact details */
+    transition: color 0.3s ease;
+}
+
+.contact-item p a {
+    color: #005f6b; /* Darker teal for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item p a:hover {
+    color: #00404d; /* Darker on hover */
+    text-decoration: underline;
+}

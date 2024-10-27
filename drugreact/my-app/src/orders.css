@@ -1,0 +1,61 @@
+.orders-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #343a40; /* Darker color for the heading */
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Add spacing above the table */
+}
+
+.orders-table th, .orders-table td {
+    border: 1px solid #dee2e6; /* Light gray border */
+    padding: 15px; /* Increased padding for more whitespace */
+    text-align: left;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.orders-table th {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text for contrast */
+    font-weight: bold;
+}
+
+.orders-table tr {
+    transition: transform 0.2s; /* Smooth transformation for hover effect */
+}
+
+.orders-table tr:nth-child(even) {
+    background-color: #e9ecef; /* Light gray for even rows */
+}
+
+.orders-table tr:hover {
+    background-color: #cfe2ff; /* Light blue on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.orders-table td {
+    vertical-align: middle; /* Center-align the content vertically */
+}
+
+/* Add some responsive design */
+@media (max-width: 768px) {
+    .orders-table th, .orders-table td {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}

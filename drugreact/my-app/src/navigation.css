@@ -1,0 +1,517 @@
+/* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ .App{
+    background-color: aliceblue;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    margin-right: 10px; /* Space between the logo and the title */
+}
+
+  .logo-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+}
+.title-content1{
+    color: #007bff;
+    font-size: 25px;
+}
+.header-marquee {
+     /* Blue background to match your current header */
+    color:#007bff;              /* White text */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;        /* Prevents text from wrapping */
+}
+
+marquee {
+    font-size: 20px;            /* Customize the text size */
+    font-family: 'Arial', sans-serif;
+}
+  .cart-btn, .login-btn, .about-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cart-btn {
+    font-size: 24px;
+  }
+  
+  .login-btn, .about-btn {
+    color: #007bff;
+  }
+  .location-dropdown {
+    margin: 8px 0;
+    display: inline-block;
+    position: relative;
+}
+
+#location-select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.location-dropdown label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.location-dropdown select {
+    cursor: pointer;
+    appearance: none; /* Remove default styling */
+    background-color: white;
+}
+
+.location-dropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Make the dropdown icon non-clickable */
+}
+
+  /* Search Section */
+  .search-section {
+    background-color:cornflowerblue !important;
+    color: white ;
+    padding: 20px 0;
+  }
+  
+  .search-container h1 {
+    font-size: 36px;
+    color: white;
+  }
+  
+  .search-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .search-input{
+    margin:auto;
+  }
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.location-dropdown {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #1a73e8;
+    margin-right: 15px;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+}
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+    margin: 0 15px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+.search-button {
+    background-color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #1a73e8;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.search-icon {
+    margin-right: 5px;
+}
+
+
+
+
+
+/* Add some padding to ensure better touch interaction on mobile */
+@media (max-width: 600px) {
+    .search-bar-container {
+        padding: 15px;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+}
+
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+
+ /* Adjust the card container */
+.cards {
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden; /* Hide overflow for seamless scrolling */
+  animation: scroll 15s linear infinite; /* Increased duration for smoother effect */
+}
+
+/* Define the card wrapper */
+.card-wrapper {
+  flex: 0 0 auto; /* Prevent flex items from shrinking */
+  height: 300px;
+  border-radius: 6px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Define the animation for scrolling */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Scroll through one full container width */
+  }
+}
+
+/* Ensure the individual card fits correctly */
+.card {
+  width: 470px; /* Card width */
+  height: 300px; /* Card height */
+  object-fit: cover;
+  object-position: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* Additional styles to maintain the overall layout */
+.container {
+  display: flex;
+  height: 300px;
+  width: 100%; /* Allow the container to fit the window */
+  margin-top: 20px;
+  border: 1px solid burlywood;
+  overflow: hidden; /* Hide overflow from the container */
+}
+
+
+  /* Features Section */
+  .features {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+  }
+  
+  .feature {
+    text-align: center;
+    width: 30%;
+    padding:10px;
+    border: 5px solid darkolivegreen;
+    border-radius: 10px;
+  }
+  
+  .feature .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    color: #555;
+  }
+
+footer {
+    background-color: cornflowerblue; /* Light grey background */
+    padding: 20px 0;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color:white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-us a {
+    text-decoration: none;
+    color:white;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+.footer-section-left-area li{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px
+  }
+ 
+  .drug-list {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all items in the middle */
+}
+
+.drug-item {
+    margin-bottom: 20px; /* Space between rows */
+    width: 50%; /* Constrain the width of each row */
+    display: flex;
+    justify-content: center; /* Center the row */
+}
+
+.drug-row {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    /* Evenly space out items */
+    gap: 15px; /* Small gap between image, details, and button */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 100%; /* Make sure each row takes up full width of its container */
+}
+
+.drug-image {
+    width: 150px; /* Image width */
+    height: 120px;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.drug-details {
+    flex-grow: 1; /* Take up remaining space */
+    text-align: center; /* Center the text inside details */
+}
+
+.order-button {
+    padding: 8px 15px; /* Adjust button size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.location-label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    font-size: 17px;
+    margin: auto;
+    padding-left: 15px;
+}
+
+/* .location-label label {
+    margin-bottom: 5px;
+    font-size:10px;
+} */
+
+.search-input,
+#location-input {
+    width: 200px; /* Adjust as necessary */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.order-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+.popup {
+  position: fixed; /* Fixed position to keep it in view */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to center */
+  width: 300px; /* Width of the popup */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Border for the popup */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 20px; /* Padding inside the popup */
+  z-index: 1000; /* Make sure it is on top of other elements */
+}
+
+.popup h2 {
+  margin-bottom: 10px; /* Space below the heading */
+  font-size: 18px; /* Font size for the heading */
+  text-align: center; /* Center the heading text */
+}
+
+.popup input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 15px; /* Space below the input for more room */
+}
+
+.popup .button-row {
+  display: flex; /* Flexbox to align buttons in a row */
+  justify-content: space-between; /* Space between buttons */
+}
+
+.popup button {
+  padding: 8px 12px; /* Smaller padding for buttons */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+  flex: 1; /* Allow buttons to grow equally */
+  margin-right: 5px; /* Space between buttons */
+}
+
+.popup button:last-child {
+  margin-right: 0; /* Remove margin for the last button */
+}
+
+.popup button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.popup .cancel-button {
+  background-color: #f44336; /* Red for cancel */
+}
+
+.popup .cancel-button:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
